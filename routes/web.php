@@ -18,6 +18,33 @@ use Illuminate\Http\Request;
 //     return view('welcome');
 // }); 
 
+
+// Route::get('login-dashboard', function () {
+//     if(Auth::check()){
+//         return redirect()->route('dashboard');
+//     }else{  
+//         return view('dashboard.login');
+//     }  
+// })->name('login');
+
+// Route::get('logout', function () {
+//     Auth::logout();
+//     return redirect()->route('login');
+// })->name('logout');
+
+// Route::post('check-login', function (Request $request) {
+//     $Get_info = $request->only(['email', 'password']);
+//     $checkLogin = Auth::attempt($Get_info);
+//     if($checkLogin){
+//         return redirect()->route('dashboard');
+//     }
+//     else{
+//         return redirect()->route('login')->with('err','Tài khoản hoặc mật khẩu không chính xác');
+//     } 
+// })->name('Checklogin');
+
+
+
 Route::group([
     'prefix'=>'/dashboard',
     'as'=>'dashboard.',
@@ -159,9 +186,6 @@ Route::group([
     Route::get('/destroy/{id}','VoucherController@destroy')->name('destroy');//xóa 1 tài nguyên
     
 });
-
-
-
 
 
 
