@@ -77,7 +77,7 @@
                           <a href="{{route('dashboard.products.edit',$item ['id'])}}" title="Chỉnh sửa" class="btn btn-primary">
                           <i class="fas fa-pen-alt"></i>
                           </a>
-                          <!-- <a onclick="return confirm('Bạn có muốn xóa sản phẩm {{ $item['name'] }} không ?');" class="btn btn-danger" title="Xóa"  href="{{route('dashboard.products.destroy',$item ['id'])}}"> -->
+                          <a  onclick="return confirm('Bạn có muốn xóa sản phẩm không ?');" class="btn btn-danger" title="Xóa"  href="{{route('dashboard.products.destroy',$item ['id'])}}">
                             <i class="far fa-trash-alt"></i>
                           </a>
                         </td> 

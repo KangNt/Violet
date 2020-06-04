@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator as FacadesValidator;
 use Validator;
 class ProductController extends Controller
 {
@@ -26,51 +27,51 @@ class ProductController extends Controller
     public function store(Request $request)
     {   
 
-        // $rules =[
-        //     'name'=>'required|unique:products,name',
-        //     'image'=>'required',
-        //     'price'=>'required', 
-        //     'cate_id'=>'required',  
-        //     'amount'=>'required',  
+        $rules =[
+            'name'=>'required|unique:products,name',
+            'image'=>'required',
+            'price'=>'required', 
+            'cate_id'=>'required',  
+            'amount'=>'required',  
 
 
-        // ];
-        // $msg = [
-        //     'name.required'=>"Tên sản phẩm không được để trống",
-        //     'name.unique'=>"Tên sản phẩm đã tồn tại",
-        //     'image.required'=>"Ảnh sản phẩm không được để trống",
-        //     'price.required'=>"Giá sản phẩm không được để trống",
-        //     'cate_id.required'=>'Danh mục không được để trống',
-        //     'amount.required'=>'Số lượng không được để trống',
-        // ];
+        ];
+        $msg = [
+            'name.required'=>"Tên sản phẩm không được để trống",
+            'name.unique'=>"Tên sản phẩm đã tồn tại",
+            'image.required'=>"Ảnh sản phẩm không được để trống",
+            'price.required'=>"Giá sản phẩm không được để trống",
+            'cate_id.required'=>'Danh mục không được để trống',
+            'amount.required'=>'Số lượng không được để trống',
+        ];
         
-        // $validator = Validator::make($request->except('_token'),$rules,$msg);
-        // if($validator->fails()){
-        //     return redirect()->route('admin/products.create')->withErrors($validator);
-        // }
-        // else{
-        //     $filename = $request->file('image')->getClientOriginalName();
-        //     $filename = str_replace(' ', '-', $filename);
-        //     $path = $request->file('image')->move('images/',$filename);
-        //     $image=url('images/'.$filename);
-        //     $Addproduct = Product::insert(
-        //         [
-        //             'name'=>$request->name,
-        //             'image'=>$image,
-        //             "price"=>$request->price,
-        //             "cate_id"=>$request->cate_id,
-        //             "sale_off"=>$request->sale_off,
-        //             "desc_short"=>$request->desc_short,
-        //             "detail"=>$request->detail,
-        //             "amount"=>$request->amount,
-        //             "rating"=>$request->rating,
-        //             "views"=>$request->views,
-        //             "status"=>$request->status,
-        //             "disabled_comment"=>$request->disabled_comment,
-        //         ]
-        //     );
-        //     return redirect()->route('admin/products.index');
-        // }
+        $validator = FacadesValidator::make($request->except('_token'),$rules,$msg);
+        if($validator->fails()){
+            return redirect()->route('dashboard.products.create')->withErrors($validator);
+        }
+        else{
+            $filename = $request->file('image')->getClientOriginalName();
+            $filename = str_replace(' ', '-', $filename);
+            $path = $request->file('image')->move('images/',$filename);
+            $image=url('images/'.$filename);
+            $Addproduct = Product::insert(
+                [
+                    'name'=>$request->name,
+                    'image'=>$image,
+                    "price"=>$request->price,
+                    "cate_id"=>$request->cate_id,
+                    "sale_off"=>$request->sale_off,
+                    "desc_short"=>$request->desc_short,
+                    "detail"=>$request->detail,
+                    "amount"=>$request->amount,
+                    "rating"=>$request->rating,
+                    "views"=>$request->views,
+                    "status"=>$request->status,
+                    "disabled_comment"=>$request->disabled_comment,
+                ]
+            );
+            return redirect()->route('dashboard.products.index');
+        }
 
     }
     public function search(Request $request)
@@ -78,7 +79,7 @@ class ProductController extends Controller
         $search = Product::where('name','like','%'.$request->search.'%')
                         ->orWhere('id','like','%'.$request->search.'%')->get();
         $searchNull = Product::orderBy('created_at','desc')->paginate(8);
-        $url =url('dashboard/products');
+        $url =url('dashboard.products');
         $output = '';
         $test= isset($request->search)=='' ? $searchNull : $search;
         foreach($test as $s){
