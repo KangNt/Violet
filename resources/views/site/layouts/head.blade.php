@@ -46,9 +46,10 @@
                 <div class="logo">
                     <a href="/"><img src="{{ asset('site/img/logo.png')}}" alt=""></a>
                 </div>
-                <div class="header-right">
+                <div class="header-right">  
                     <img src="{{ asset('site/img/icons/search.png')}}" alt="" class="search-trigger" >
-                    <img src="{{ asset('site/img/icons/man.png')}}" alt="" href="/profile">
+                    <a href="/profile">  <img src="{{ asset('site/img/icons/man.png')}}" alt="" ></a>
+                   
                     <a href="/checkout">
                         <img src="{{ asset('site/img/icons/bag.png')}}" alt="">
                         <span>2</span>

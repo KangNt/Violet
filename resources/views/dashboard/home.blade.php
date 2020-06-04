@@ -39,7 +39,7 @@
             <div class="icon">
               <i class="fas fa-file-invoice"></i>
             </div>
-            <a href="#" class="small-box-footer">Xem chi tiết<i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('dashboard.orders.index')}}" class="small-box-footer">Xem chi tiết<i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -55,7 +55,7 @@
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="#" class="small-box-footer">Xem chi tiết<i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('dashboard.categories.index')}}" class="small-box-footer">Xem chi tiết<i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -86,7 +86,7 @@
             <div class="icon">
             <i class="fas fa-toolbox"></i>
             </div>
-            <a href="#" class="small-box-footer">Xem chi tiết<i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('dashboard.products.index')}}" class="small-box-footer">Xem chi tiết<i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -103,7 +103,7 @@
             <div class="icon">
               <i class="far fa-address-card"></i>
             </div>
-            <a href="#" class="small-box-footer">Xem chi tiết<i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('dashboard.contacts.index')}}" class="small-box-footer">Xem chi tiết<i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -119,7 +119,7 @@
             <div class="icon">
               <i class="far fa-comments"></i>
             </div>
-            <a href="#" class="small-box-footer">Xem chi tiết<i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('dashboard.comments.index')}}" class="small-box-footer">Xem chi tiết<i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

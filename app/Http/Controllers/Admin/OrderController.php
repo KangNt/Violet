@@ -345,12 +345,12 @@ class OrderController extends Controller
             'payment_method'=>$request->payment_method
             
         ]);
-        return redirect()->route('dashboard/orders.index');
+        return redirect()->route('dashboard.orders.index');
     }
 
     public function destroy($id)
     {
         Order::destroy($id);
-        return redirect()->route('dashboard/orders.index');
+        return redirect()->route('dashboard.orders.index');
     }
 }

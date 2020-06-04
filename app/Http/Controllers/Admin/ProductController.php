@@ -158,11 +158,11 @@ class ProductController extends Controller
         }
         $editPros->save();
 
-        return redirect()->route('dashboard/products.index');
+        return redirect()->route('dashboard.products.index');
     }
     public function destroy($id)
     {
         Product::destroy($id);
-        return redirect()->route('dashboard/products.index');
+        return redirect()->route('dashboard.products.index');
     }
 }

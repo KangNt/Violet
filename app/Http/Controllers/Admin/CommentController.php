@@ -100,6 +100,6 @@ class CommentController extends Controller
     public function destroy($id)
     {
         Comment::destroy($id);
-        return redirect()->route('dashboard/comments.index');
+        return redirect()->route('dashboard.comments.index');
     }
 }

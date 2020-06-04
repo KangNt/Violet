@@ -3,7 +3,7 @@
 @section('contents')
 <div class="wrapper">
     <section class="content container-fluid">
-        <form  action="{{ route('admin/orders.update',$order->id)}}" method="POST" role="form" enctype="multipart/form-data">
+        <form  action="{{ route('dashboard.orders.update',$order->id)}}" method="POST" role="form" enctype="multipart/form-data">
         <legend>Cập nhật đơn hàng </legend>
         @csrf
         <div class="row">
@@ -58,7 +58,7 @@
 
                     </select>
                 </div> 
-                <a href="{{route('admin/orders.index')}}" class="btn btn-danger">Hủy</a>
+                <a href="{{route('dashboard.orders.index')}}" class="btn btn-danger">Hủy</a>
                 <button type="submit" class="btn btn-primary">Cập nhật</button>
             </div>
             <div class="col-lg-5"> 
