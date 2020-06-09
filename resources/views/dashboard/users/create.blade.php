@@ -24,6 +24,10 @@
             <label for="">Password</label>
             <input type="password" name="password" class="form-control" id="" placeholder="Input field">
         </div>
+        <!-- <div class="form-group">
+            <label for="">token_verify</label>
+            <input type="token_verify" name="token_verify" class="form-control" id="" placeholder="Input field">
+        </div> -->
         <div class="form-group">
             <label for="">Role</label>
             <input type="number" name="role" class="form-control" id="" placeholder="Input field">

@@ -143,7 +143,7 @@
                                 <p>$10</p>
                             </div>
 
-                            <div class="cart-total">
+                            <div class="cart-total">  
                                 <span>Total</span>
                                 <p>$39</p>
                             </div>
@@ -162,7 +162,8 @@
                                     <input type="radio" id="two">
                                 </li>
                             </ul>
-                            <button type="submit">Place your order</button>
+                          <button type="submit"  onclick="return confirm('Comfirm orders!');" >Place your order</button>
+                            
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,9 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Dotenv\Validator as DotenvValidator;
+use Illuminate\Support\Facades\Validator as FacadesValidator;
+use Illuminate\Validation\Validator as ValidationValidator;
 use Validator;
 class CategoryController extends Controller
 {
@@ -38,31 +41,31 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        // $rules =[
-        //     'name'=>'required|unique:categories,cate_name',
-        //     'description'=>'required',
+        $rules =[
+            'name'=>'required|unique:categories,cate_name',
+            'description'=>'required',
 
 
-        // ];
-        // $msg = [
-        //     'name.required'=>"Tên danh mục không được để trống",
-        //     'name.unique'=>"Tên danh mục đã tồn tại",
-        //     'description.required'=>'Mô tả không được để trống',
-        // ];
+        ];
+        $msg = [
+            'name.required'=>"Tên danh mục không được để trống",
+            'name.unique'=>"Tên danh mục đã tồn tại",
+            'description.required'=>'Mô tả không được để trống',
+        ];
         
-        // $validator = Validator::make($request->except('_token'),$rules,$msg);
-        // if($validator->fails()){
-        //     return redirect()->route('admin/categories.create')->withErrors($validator);
-        // }else{
+        $validator = FacadesValidator::make($request->except('_token'),$rules,$msg);
+        if($validator->fails()){
+            return redirect()->route('dashboard.categories.create')->withErrors($validator);
+        }else{
 
-        //     $Addcate = Category::insert(
-        //         [
-        //             'cate_name'=>$request->name,
-        //             'description'=>$request->description,
-        //         ]
-        //     );
-        //     return redirect()->route('dashboard.categories.index');
-        // }
+            $Addcate = Category::insert(
+                [
+                    'cate_name'=>$request->name,
+                    'description'=>$request->description,
+                ]
+            );
+            return redirect()->route('dashboard.categories.index');
+        }
     }
 
     /**
@@ -101,13 +104,13 @@ class CategoryController extends Controller
         
         // var_dump($checkCate);
         if($checkCate){
-            return redirect()->route('dashboard/categories.edit',$id)->with('err','Tên danh mục đã tồn tại');
+            return redirect()->route('dashboard.categories.edit',$id)->with('err','Tên danh mục đã tồn tại');
         }
         elseif($request->name==''){
-            return redirect()->route('dashboard/categories.edit',$id)->with('err','Tên danh mục không được để trống');
+            return redirect()->route('dashboard.categories.edit',$id)->with('err','Tên danh mục không được để trống');
         }
         else{
-            return redirect()->route('dashboard/categories.index');
+            return redirect()->route('dashboard.categories.index');
         }
     }
 
@@ -120,6 +123,6 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Category::destroy($id);
-        return redirect()->route('dashboard/categories.index');
+        return redirect()->route('dashboard.categories.index');
     }
 }

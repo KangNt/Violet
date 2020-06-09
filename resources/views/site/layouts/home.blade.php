@@ -21,6 +21,7 @@
                 </div>
             </div>
             <div class="row" id="product-list">
+                
                 <div class="col-lg-3 col-sm-6 mix all dresses bags">
                     <div class="single-product-item">
                         <figure>
@@ -28,7 +29,7 @@
                             <div class="p-status">new</div>
                         </figure>
                         <div class="product-text">
-                            <h6>Green Dress with details</h6>
+                            <h6>Green Dress with details</h6>   
                             <p>$22.90</p>
                         </div>
                     </div>
@@ -116,6 +117,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -150,6 +152,8 @@
         </div>
     </section>
     <!-- Lookbok Section End -->
+    
+    
 
     <!-- Logo Section Begin -->
     <div class="logo-section spad">

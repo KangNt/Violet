@@ -61,6 +61,7 @@ class UserController extends Controller
             'password' => bcrypt(''),
             'role' => $data['role'],
             'status' => $data['status']
+            
         ]);
         return redirect()->route('dashboard.users.index');
     }

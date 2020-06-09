@@ -64,7 +64,7 @@
           <div class="small-box bg-warning">
             <div class="inner">
               
-              <h3>41</h3>
+              <h3>12</h3>
               <p>Thành Viên</p>
             </div>
             <div class="icon">
