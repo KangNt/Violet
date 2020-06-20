@@ -194,12 +194,6 @@ Route::group([
 
 
 
-
-
-
-
-
-
 //Route site
 Route::group([
     'prefix'=>'/',
@@ -218,6 +212,8 @@ Route::group([
     Route::get('/register','HomeController@register')->name('register');// hiển thị tất cả tài nguyên
     Route::get('/signIn','HomeController@signIn')->name('signIn');// hiển thị tất cả tài nguyên
     Route::get('/profile','HomeController@profile')->name('profile');// hiển thị tất cả tài nguyên
+    Route::get('/productDetail','HomeController@productDetail')->name('productDetail');// hiển thị tất cả tài nguyên
+    
 
 });
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Product;
 class HomeController extends Controller
 {
     /**
@@ -13,8 +13,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-        return view('site.layouts.home');
+        $listProducts= Product::all();
+        return view('site.layouts.home',['listProducts'=>$listProducts]);
     }
 
     public function categories()
@@ -67,6 +67,11 @@ class HomeController extends Controller
     public function profile()
     {
         return view('site.pages.profile');
+    }
+    public function productDetail()
+    {
+        $listProducts= Product::all();
+        return view('site.pages.productDetail',['listProducts'=>$listProducts]);
     }
 
     /**
