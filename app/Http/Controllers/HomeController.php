@@ -24,7 +24,8 @@ class HomeController extends Controller
 
     public function dresses()
     {
-        return view('site.pages.dresses');
+        $listDresses = Product::all();
+        return view('site.pages.dresses',['listDresses' => $listDresses]);
     }
     
     public function bags()

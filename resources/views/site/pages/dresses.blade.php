@@ -93,71 +93,26 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="row">
+                    @foreach($listDresses as $listDress)
                         <div class="col-lg-6 col-md-6">
                             <div class="single-product-item">
                                 <figure>
-                                    <img src="site/img/products/img-2.jpg" alt="">
+                                    <img src="{{$listDress->image}}" alt="">
                                     <div class="p-status sale">sale</div>
                                 </figure>
                                 <div class="product-text">
                                     <a href="#">
-                                        <h6>Yellow Maxi Dress</h6>
+                                        <h6>{{$listDress->name}}</h6>
                                     </a>
-                                    <p>$25.90</p>
+                                    <p>{{$listDress->price}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single-product-item">
-                                <figure>
-                                    <img src="site/img/products/img-3.jpg" alt="">
-                                    <div class="p-status">new</div>
-                                    <div class="hover-icon">
-                                        <a href="site/img/products/img-3.jpg" class="pop-up"><img
-                                                src="site/img/icons/zoom-plus.png" alt=""></a>
-                                    </div>
-                                </figure>
-                                <div class="product-text">
-                                    <a href="#">
-                                        <h6>One piece bodysuit</h6>
-                                    </a>
-                                    <p>$19.90</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single-product-item">
-                                <figure>
-                                    <img src="site/img/products/img-6.jpg" alt="">
-                                    <div class="p-status sale">sale</div>
-                                </figure>
-                                <div class="product-text">
-                                    <a href="#">
-                                        <h6>Yellow Maxi Dress</h6>
-                                    </a>
-                                    <p>$25.90</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single-product-item">
-                                <figure>
-                                    <img src="site/img/products/img-1.jpg" alt="">
-                                    <div class="hover-icon">
-                                        <a href="site/img/products/img-1.jpg" class="pop-up"><img
-                                                src="site/img/icons/zoom-plus.png" alt=""></a>
-                                    </div>
-                                </figure>
-                                <div class="product-text">
-                                    <a href="#">
-                                        <h6>One piece bodysuit</h6>
-                                    </a>
-                                    <p>$19.90</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+                    
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product-item">
                         <figure>

@@ -144,7 +144,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 text-right">
-                                    <a href="#" class="primary-btn chechout-btn">Proceed to checkout</a>
+                                    <a href="/checkout" class="primary-btn chechout-btn">Proceed to checkout</a>
                                 </div>
                             </div>
                         </div>
