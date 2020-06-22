@@ -104,7 +104,7 @@
                                     <a href="#">
                                         <h6>{{$listDress->name}}</h6>
                                     </a>
-                                    <p>{{$listDress->price}}</p>
+                                    <p>{{$listDress->price}}$</p>
                                 </div>
                             </div>
                         </div>

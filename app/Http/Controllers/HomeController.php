@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 class HomeController extends Controller
 {
     /**
@@ -19,7 +20,8 @@ class HomeController extends Controller
 
     public function categories()
     {
-        return view('site.pages.categories');
+        $listCategories = Category::all();
+        return view('site.pages.categories',['listCategories'=>$listCategories]);
     }
 
     public function dresses()
@@ -30,11 +32,13 @@ class HomeController extends Controller
     
     public function bags()
     {
-        return view('site.pages.bags');
+        $listBags = Product::all();
+        return view('site.pages.bags',['listBags'=>$listBags]);
     }
     public function shoes()
     {
-        return view('site.pages.shoes');
+        $listShoes = Product::all();
+        return view('site.pages.shoes',['listShoes'=>$listShoes]);
     }
     public function accesories()
     {

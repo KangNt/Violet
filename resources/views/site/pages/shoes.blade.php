@@ -7,10 +7,10 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="page-breadcrumb">
-                        <h2>Shirts<span>.</span></h2>
+                        <h2>Shoes<span>.</span></h2>
                         <a href="#">Home</a>
-                        <a href="#">Dresses</a>
-                        <a class="active" href="#">Night Dresses</a>
+                        <a href="#">Shoes</a>
+                        <a class="active" href="#">Night Shoes</a>
                     </div>
                 </div>
                 <div class="col-lg-8">

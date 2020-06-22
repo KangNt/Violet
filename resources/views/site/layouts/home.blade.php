@@ -11,11 +11,11 @@
                             <h2>Latest Products</h2>
                         </div>
                         <ul class="product-controls">
-                            <li data-filter="*">All</li>
-                            <li data-filter=".dresses">Dresses</li>
-                            <li data-filter=".bags">Bags</li>
-                            <li data-filter=".shoes">Shoes</li>
-                            <li data-filter=".accesories">Accesories</li>
+                            <li data-filter="*" ><a href="/" style="color:gray">All</a></li>
+                            <li data-filter=".dresses"><a href="/dresses" style="color:gray">Dresses</a> </li>
+                            <li data-filter=".bags"> <a href="/bags" style="color:gray">Bags</a></li>
+                            <li data-filter=".shoes"><a href="/shoes" style="color:gray">Shoes</a></li>
+                            <li data-filter=".accesories"> <a href="/accesories" style="color:gray">Accesories</a></li>
                         </ul>
                     </div>
                 </div>

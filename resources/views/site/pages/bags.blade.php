@@ -29,55 +29,28 @@
                 <a href="#">Next</a>
             </div>
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="product-slider owl-carousel">
-                        <div class="product-img">
-                            <figure>
-                                <img src="site/img/shoes1.jpg" alt="">
-                                <div class="p-status">new</div>
-                            </figure>
+            <div class="col-lg-6 col-md-6">
+                    <div class="row">
+                    @foreach($listBags as $listBag)
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-product-item">
+                                <figure>
+                                    <img src="{{$listBag->image}}" alt="">
+                                    <div class="p-status sale">sale</div>
+                                </figure>
+                                <div class="product-text">
+                                    <a href="#">
+                                        <h6>{{$listBag->name}}</h6>
+                                    </a>
+                                    <p>{{$listBag->price}}$</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="product-img">
-                            <figure>
-                                <img src="site/img/shoes2.jpg" alt="">
-                                <div class="p-status">new</div>
-                            </figure>
-                        </div>
-                    </div>
+                        @endforeach
                     
-                </div>
-                <div class="col-lg-6">
-                    <div class="product-content">
-                        <h2>Dotted Blue Shirt</h2>
-                        <div class="pc-meta">
-                            <h5>$22.90</h5>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                            viverra maecenas accumsan lacus vel facilisis.</p>
-                        <ul class="tags">
-                            <li><span>Category :</span> Men’s Wear</li>
-                            <li><span>Tags :</span> man, shirt, dotted, elegant, cool</li>
-                        </ul>
-                        <div class="product-quantity">
-                            <div class="pro-qty">
-                                <input type="text" value="1">
-                            </div>
-                        </div>
-                        <a href="#" class="primary-btn pc-btn">Add to cart</a>
-                        <ul class="p-info">
-                            <li>Product Information</li>
-                            <li>Reviews</li>
-                            <li>Product Care</li>
-                        </ul>
                     </div>
+                </div>
+              
                 </div>
             </div>
         </div>
