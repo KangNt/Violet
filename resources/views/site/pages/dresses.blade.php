@@ -95,9 +95,10 @@
                     <div class="row">
                     @foreach($listDresses as $listDress)
                         <div class="col-lg-6 col-md-6">
-                            <div class="single-product-item">
-                                <figure>
-                                    <img src="{{$listDress->image}}" alt="">
+                        <a href="/productDetail">
+                        <div class="single-product-item">
+                                <figure >
+                                    <img src="{{$listDress->image}}" alt="" >
                                     <div class="p-status sale">sale</div>
                                 </figure>
                                 <div class="product-text">
@@ -107,6 +108,7 @@
                                     <p>{{$listDress->price}}$</p>
                                 </div>
                             </div>
+                        </a>
                         </div>
                         @endforeach
                     

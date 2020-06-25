@@ -72,40 +72,84 @@
                 </div>
             </div>
         </div>
-        <div class="row">
 
+
+        <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="row">
-
-                    @foreach($listCategories as $listCate)
                     <div class="col-lg-6 col-md-6">
                         <div class="single-product-item">
-                            <!-- <figure>
-                                    <img src="site/img/products/img-1.jpg" alt="">
-                                    <div class="hover-icon">
-                                        <a href="site/img/products/img-1.jpg" class="pop-up"><img
-                                                src="site/img/icons/zoom-plus.png" alt=""></a>
-                                    </div>
-                                </figure> -->
-
                             <div class="product-text">
-
-
-                                <!-- <p>{{$listCate->description}}</p> -->
-                                <li class="list-group-item ">
-                                    <a href="#">
-                                        <h6>{{$listCate->cate_name}}</h6>
+                                <li class="list-group-item">
+                                    <a href="/dresses">
+                                        <h6>Dresses</h6>
                                     </a></li>
                             </div>
-
                         </div>
                     </div>
-                    @endforeach
-
+                  
                 </div>
             </div>
-
         </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single-product-item">
+                            <div class="product-text">
+                                <li class="list-group-item">
+                                    <a href="/bags">
+                                        <h6>Bags</h6>
+                                    </a></li>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single-product-item">
+                            <div class="product-text">
+                                <li class="list-group-item">
+                                    <a href="/shoes">
+                                        <h6>Shoes</h6>
+                                    </a></li>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single-product-item">
+                            <div class="product-text">
+                                <li class="list-group-item">
+                                    <a href="/accesories">
+                                        <h6>Accesories</h6>
+                                    </a></li>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+
+
+
+
+
         <div class="more-product">
             <div class="row">
                 <div class="col-lg-12 text-center">

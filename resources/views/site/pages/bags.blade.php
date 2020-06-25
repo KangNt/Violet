@@ -1,6 +1,5 @@
 @include('site.layouts.head')
 
-
 <!-- Page Add Section Begin -->
 <section class="page-add">
         <div class="container">
@@ -32,7 +31,8 @@
             <div class="col-lg-6 col-md-6">
                     <div class="row">
                     @foreach($listBags as $listBag)
-                        <div class="col-lg-6 col-md-6">
+                    <a href="/productDetail">
+                    <div class="col-lg-6 col-md-6">
                             <div class="single-product-item">
                                 <figure>
                                     <img src="{{$listBag->image}}" alt="">
@@ -46,6 +46,7 @@
                                 </div>
                             </div>
                         </div>
+                    </a>
                         @endforeach
                     
                     </div>

@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $listProducts= Product::all();
+        $listProducts= Product::all() ;
         return view('site.layouts.home',['listProducts'=>$listProducts]);
     }
 
@@ -26,23 +26,24 @@ class HomeController extends Controller
 
     public function dresses()
     {
-        $listDresses = Product::all();
+        $listDresses = Product::where('cate_id',47)->limit(6)->get(); 
         return view('site.pages.dresses',['listDresses' => $listDresses]);
     }
     
     public function bags()
     {
-        $listBags = Product::all();
+        $listBags = Product::where('cate_id',48)->limit(6)->get();
         return view('site.pages.bags',['listBags'=>$listBags]);
     }
     public function shoes()
     {
-        $listShoes = Product::all();
+        $listShoes = Product::where('cate_id',49)->limit(6)->get(); 
         return view('site.pages.shoes',['listShoes'=>$listShoes]);
     }
     public function accesories()
-    {
-        return view('site.pages.accesories');
+    {   
+        $listAccesories = Product::where('cate_id',50)->limit(6)->get();
+        return view('site.pages.accesories',['listAccesories'=>$listAccesories]);
     }
     public function checkout()
     {
