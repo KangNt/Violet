@@ -20,50 +20,58 @@
     </div>
 </section>
 <!-- Page Add Section End -->
-
-
-<div class="col-lg-6 col-md-6">
-            <div class="single-product-item">
-                <figure>
-                    <img src="site/img/products/img-9.jpg" alt="">
-                    <div class="p-status">new</div>
-                    <div class="hover-icon">
-                        <a href="site/img/products/img-9.jpg" class="pop-up"><img src="site/img/icons/zoom-plus.png" alt=""></a>
-                    </div>
-                </figure>
-                <div class="product-text">
-                    <a href="#">
-                        <h6>Green Dress with details</h6>
-                    </a>
-                    <p>$22.90</p>
-                </div>
-            </div>
-        </div>
-<section class="product-page">
-
+<section class="categories-page spad">
     <div class="container">
-    
-        <div class="row" id="product-list">
-            @foreach($listShoes as $listSho)
-            <div class="col-lg-3 col-sm-6 mix all dresses bags">
-                <div class="single-product-item">
-                    <figure>
-                        <a href="/productDetail"><img src="{{$listSho->image}}" alt=""></a>
-                        <div class="p-status">new</div>
-                    </figure>
-                    <div class="product-text">
-                        <h6>{{$listSho->name}}</h6>
-                        <p>{{$listSho->price}}</p>
+    <div class="product-control">
+                <a href="#">Previous</a>
+                <a href="#">Next</a>
+            </div>
+            <div class="row">
+            <div class="col-lg-6 col-md-6">
+                    <div class="single-product-item">
+                        <figure>
+                            <img src="site/img/product/shoes1.jpg" alt="">
+                            <div class="p-status">new</div>
+                            <div class="hover-icon">
+                                <a href="site/img/product/shoes1.jpg" class="pop-up"><img src="site/img/icons/zoom-plus.png"
+                                        alt=""></a>
+                            </div>
+                        </figure>
+                        <div class="product-text">
+                            <a href="/productDetail">
+                                <h6>Green Dress with details</h6>
+                            </a>
+                            <p>$22.90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="row">
+                        @foreach($listShoes as $listSho)
+                        <div class="col-lg-6 col-md-6">
+                            <a href="/productDetail">
+                                <div class="single-product-item">
+                                    <figure>
+                                        <img src="{{$listSho->image}}" alt="">
+                                        <div class="p-status sale">sale</div>
+                                    </figure>
+                                    <div class="product-text">
+                                        <a href="#">
+                                            <h6>{{$listSho->name}}</h6>
+                                        </a>
+                                        <p>{{$listSho->price}}$</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
-            @endforeach
-
-        </div>
-
-
+        
     </div>
 </section>
+
 
 
 <!-- Related Product Section Begin -->

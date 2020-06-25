@@ -20,43 +20,58 @@
     </section>
     <!-- Page Add Section End -->
 
-    <!-- Product Page Section Beign -->
-    <section class="product-page">
-        <div class="container">
-            <div class="product-control">
+    <section class="categories-page spad">
+    <div class="container">
+    <div class="product-control">
                 <a href="#">Previous</a>
                 <a href="#">Next</a>
             </div>
             <div class="row">
             <div class="col-lg-6 col-md-6">
-                    <div class="row">
-                    @foreach($listBags as $listBag)
-                    <a href="/productDetail">
-                    <div class="col-lg-6 col-md-6">
-                            <div class="single-product-item">
-                                <figure>
-                                    <img src="{{$listBag->image}}" alt="">
-                                    <div class="p-status sale">sale</div>
-                                </figure>
-                                <div class="product-text">
-                                    <a href="#">
-                                        <h6>{{$listBag->name}}</h6>
-                                    </a>
-                                    <p>{{$listBag->price}}$</p>
-                                </div>
+                    <div class="single-product-item">
+                        <figure>
+                            <img src="site/img/product/bag1.jpg" alt="">
+                            <div class="p-status">new</div>
+                            <div class="hover-icon">
+                                <a href="site/img/product/bags1.jpg" class="pop-up"><img src="site/img/icons/zoom-plus.png"
+                                        alt=""></a>
                             </div>
+                        </figure>
+                        <div class="product-text">
+                            <a href="/productDetail">
+                                <h6>Green Dress with details</h6>
+                            </a>
+                            <p>$22.90</p>
                         </div>
-                    </a>
-                        @endforeach
-                    
                     </div>
                 </div>
-              
+                <div class="col-lg-6 col-md-6">
+                    <div class="row">
+                        @foreach($listBags as $listBag)
+                        <div class="col-lg-6 col-md-6">
+                            <a href="/productDetail">
+                                <div class="single-product-item">
+                                    <figure>
+                                        <img src="{{$listBag->image}}" alt="">
+                                        <div class="p-status sale">sale</div>
+                                    </figure>
+                                    <div class="product-text">
+                                        <a href="#">
+                                            <h6>{{$listBag->name}}</h6>
+                                        </a>
+                                        <p>{{$listBag->price}}$</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Product Page Section End -->
+        
+    </div>
+</section>
+
 
     <!-- Related Product Section Begin -->
     <section class="related-product spad">
@@ -72,7 +87,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="site/img/shoes2.jpg" alt=""></a>
+                            <a href="#"><img src="site/img/shoes4.jpg" alt=""></a>
                             <div class="p-status">new</div>
                         </figure>
                         <div class="product-text">
@@ -108,7 +123,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="site/img/shoes2.jpg" alt=""></a>
+                            <a href="#"><img src="site/img/shoes3.jpg" alt=""></a>
                             <div class="p-status popular">popular</div>
                         </figure>
                         <div class="product-text">
